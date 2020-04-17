@@ -40,7 +40,7 @@ function showCard(id) {
   $('#top-card').append(new_top);
   $('#top-card').remove();
   $('#scene').append(top_card);
-  setTimeout(function() {$("#c" + id).toggleClass('is-flipped');}, 1);
+  setTimeout(function() {$("#c" + id).toggleClass('is-flipped');}, 10);
 }
 
 //disable links for testing only

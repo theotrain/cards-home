@@ -133,6 +133,7 @@ body {
   transform-style: preserve-3d;
   cursor: pointer;
   position: absolute;
+  /* outline: 1px solid transparent; */
   /* -webkit-transform: translate3d(0,0,0); */
   /* z-index: 1; */
   /* -webkit-transform: translate3d(0,0,0); */
