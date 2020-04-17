@@ -3,6 +3,7 @@ body {
   perspective: 2000px;
   /* background-color: #ddd; */
   font-size: 17px;
+  -webkit-font-smoothing: antialiased;
 }
 :root {
   --orange: #f0513a;
@@ -57,12 +58,16 @@ body {
   /* border: 1px solid #CCC; */
   /* background-color: #CCC; */
   /* margin: 40px 0; */
-  perspective: 2000px;
+  perspective:2000px;
   /* display: flex;
   justify-content: flex-start;
   flex-wrap: row;
   margin: auto; */
+  position: relative;
 }
+/* #card-section-nav{
+  position: relative;
+} */
 .card-outer {
   display: flex;
   flex-direction: row;
@@ -114,6 +119,12 @@ body {
 .card-quotes .body {
   margin-bottom: 40px;
 }
+/* #scene {
+  position: relative;
+  -webkit-transform: translate3d(0,0,0);
+  z-index: 0;
+} */
+
 .card {
   /* large: 244 x 350, med: 223 x 320, sm: 209 x 300 */
   width: 223px;
@@ -122,6 +133,10 @@ body {
   transform-style: preserve-3d;
   cursor: pointer;
   position: absolute;
+  /* -webkit-transform: translate3d(0,0,0); */
+  /* z-index: 1; */
+  /* -webkit-transform: translate3d(0,0,0); */
+  /* perspective: 1000px; */
 }
 .card-quotes {
   display:none;
@@ -138,9 +153,17 @@ body {
 .card-quotes .body+.title {
   margin-top: 17px;
 }
+#top-card {
+  z-index: 999;
+  -webkit-transform: translate3d(0,0,1px);
+}
 .is-flipped {
-  z-index: 10;
   transition: transform 0.65s;
+  /* -webkit-transform: translate3d(0,0,1000px); */
+  /* transform: perspective(500px) translate3d(10px, 0, 3000px);
+  -webkit-transform: perspective(500px) translate3d(10px, 0, 3000px); */
+  /* z-index: 999; */
+  /* transform: translate3d(100,100,100px); */
 }
 
 #c1 {
@@ -157,6 +180,7 @@ body {
   transform: rotate(-6deg);
 }
 #c2.is-flipped {
+  /* -webkit-transform: translate3d(0,0,0); */
   transform: rotateY(180deg) rotate(6deg);
 }
 #c3 {

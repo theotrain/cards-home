@@ -26,9 +26,21 @@ let cardNum = 1
 
 function showCard(id) {
   $(".card").removeClass('is-flipped');
-  $("#c" + id).toggleClass('is-flipped');
   $('.card-quotes').hide();
   $('#quote' + id).fadeIn();
+  // i need to remove the card section from #scene
+  // i need to remove the card section from #top-card
+  // and reinsert it at the end of #scene
+  var new_top = $('#c' + id)[0];
+  var old_top = $('#top-card').children()[0];
+  var top_card = $('#top-card')[0];
+  $('#c' + id).remove();
+  $('#scene').append(old_top);
+  $('#top-card').children().remove();
+  $('#top-card').append(new_top);
+  $('#top-card').remove();
+  $('#scene').append(top_card);
+  setTimeout(function() {$("#c" + id).toggleClass('is-flipped');}, 1);
 }
 
 //disable links for testing only
