@@ -149,7 +149,7 @@ body {
   transform: rotate(-10deg);
 }
 #c1.is-flipped {
-  transform: rotateY(180deg) rotate(5deg);
+  transform: rotateY(180deg) rotate(10deg);
 }
 #c2 {
   top: 15px;
@@ -157,7 +157,7 @@ body {
   transform: rotate(-6deg);
 }
 #c2.is-flipped {
-  transform: rotateY(180deg) rotate(2deg);
+  transform: rotateY(180deg) rotate(6deg);
 }
 #c3 {
   top: 30px;
@@ -165,7 +165,7 @@ body {
   transform: rotate(-2deg);
 }
 #c3.is-flipped {
-  transform: rotateY(180deg) rotate(0deg);
+  transform: rotateY(180deg) rotate(2deg);
 }
 #c4 {
   top: 8px;
@@ -181,7 +181,7 @@ body {
   transform: rotate(6deg);
 }
 #c5.is-flipped {
-  transform: rotateY(180deg) rotate(-5deg);
+  transform: rotateY(180deg) rotate(-6deg);
 }
 
 .card__face {
