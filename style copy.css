@@ -85,21 +85,18 @@ body {
   flex-direction: column; */
   position: relative;
   /* background-color: red; */
-  min-width: 400px;
-  /* background-color: #eee; */
-}
-#card-section-nav.wide {
   min-width: 100%;
+  background-color: #eee;
 }
 .scene:hover .card__face {
-  /* box-shadow: 2px 2px 6px 5px rgba(255, 70, 0, 0.25); */
+  box-shadow: 2px 2px 6px 5px rgba(255, 70, 0, 0.25);
 }
 #card-section-quotes {
   /* background-color: yellow; */
   /* width: 58%; */
   padding: 30px;
-  display: flex;
-  /* display: none; */
+  /* display: flex; */
+  display: none;
   align-items: center;
   /* visibility: hidden; */
 }
@@ -136,11 +133,7 @@ body {
   /* large: 244 x 350, med: 223 x 320, sm: 209 x 300 */
   width: 223px;
   height: 320px;
-  /* transition: transform 0s; */
-  transition-property: left, top, transform;
-  transition-duration: 1s, 1s, 0.65s;
-  /* transition: left 1s ease-out; */
-  /* transition: top 1s ease-out; */
+  transition: transform 0s;
   transform-style: preserve-3d;
   cursor: pointer;
   position: absolute;
@@ -170,11 +163,7 @@ body {
   -webkit-transform: translate3d(0,0,1px);
 }
 .is-flipped {
-  /* transition: transform 0.65s; */
-  /* transition: left 1s ease-out; */
-  transition-property: left, top, transform;
-  transition-duration: 1s, 1s, 0.65s;
-  /* transition: top 1s ease-out; */
+  transition: transform 0.65s;
   /* -webkit-transform: translate3d(0,0,1000px); */
   /* transform: perspective(500px) translate3d(10px, 0, 3000px);
   -webkit-transform: perspective(500px) translate3d(10px, 0, 3000px); */
@@ -184,107 +173,45 @@ body {
 
 #c1 {
   top: 50px;
-  left: 100px;
+  left: 30px;
   transform: rotate(-10deg);
 }
 #c1.is-flipped {
   transform: rotateY(180deg) rotate(10deg);
 }
-
 #c2 {
-  top: 20px;
-  left: 160px;
-  transform: rotate(-8deg);
+  top: 15px;
+  left: 60px;
+  transform: rotate(-6deg);
 }
 #c2.is-flipped {
   /* -webkit-transform: translate3d(0,0,0); */
-  transform: rotateY(180deg) rotate(8deg);
+  transform: rotateY(180deg) rotate(6deg);
 }
-
 #c3 {
-  top: 15px;
-  left: 256px;
-  transform: rotate(-4deg);
+  top: 30px;
+  left: 90px;
+  transform: rotate(-2deg);
 }
 #c3.is-flipped {
-  transform: rotateY(180deg) rotate(4deg);
+  transform: rotateY(180deg) rotate(2deg);
 }
-
 #c4 {
-  top: 27px;
-  left: 345px;
-  transform: rotate(-1deg);
+  top: 8px;
+  left: 120px;
+  transform: rotate(2deg);
 }
 #c4.is-flipped {
-  transform: rotateY(180deg) rotate(1deg);
+  transform: rotateY(180deg) rotate(-2deg);
 }
-
 #c5 {
-  top: 30px;
-  left: 422px;
-  transform: rotate(3deg);
-}
-#c5.is-flipped {
-  transform: rotateY(180deg) rotate(-3deg);
-}
-
-#c6 {
-  top: 11px;
-  left: 480px;
-  transform: rotate(4deg);
-}
-#c6.is-flipped {
-  transform: rotateY(180deg) rotate(-4deg);
-}
-
-#c7 {
-  top: 15px;
-  left: 568px;
+  top: 55px;
+  left: 150px;
   transform: rotate(6deg);
 }
-#c7.is-flipped {
+#c5.is-flipped {
   transform: rotateY(180deg) rotate(-6deg);
 }
-#c8 {
-  top: 29px;
-  left: 650px;
-  transform: rotate(9deg);
-}
-#c8.is-flipped {
-  transform: rotateY(180deg) rotate(-9deg);
-}
-
-#c1.stack {
-  left: 34px;
-}
-#c2.stack {
-  left: 49px;
-}
-#c3.stack {
-  left: 60px;
-}
-#c4.stack {
-  left: 75px;
-  /* top: 27px; */
-  top: 15px;
-}
-#c5.stack {
-  left: 90px;
-  /* top: 30px; */
-  top: 12px;
-}
-#c6.stack {
-  left: 105px;
-}
-#c7.stack {
-  left: 120px;
-}
-#c8.stack {
-  left: 135px;
-}
-/* .spread {
-  transition: left 1s;
-} */
 
 .card__face {
   border-radius: 8px;
@@ -331,18 +258,6 @@ body {
 }
 #c5 .card__face--back {
   background-image: url("card1-texture.jpg");
-}
-#c6 .card__face--back {
-  background-image: url("card5-texture.jpg");
-}
-#c7 .card__face--back {
-  background-image: url("card4-texture.jpg");
-}
-#c8 .card__face--back {
-  background-image: url("card3-texture.jpg");
-}
-#c9 .card__face--back {
-  background-image: url("card2-texture.jpg");
 }
 #email-section {
   background-color: #f0513b;
