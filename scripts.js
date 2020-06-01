@@ -6,6 +6,28 @@ let cardTotal = 8
 let cardNum = 0
 let firstClick = true
 
+// Function from David Walsh: http://davidwalsh.name/css-animation-callback
+function whichTransitionEvent(){
+  var t,
+      el = document.createElement("fakeelement");
+
+  var transitions = {
+    "transition"      : "transitionend",
+    "OTransition"     : "oTransitionEnd",
+    "MozTransition"   : "transitionend",
+    "WebkitTransition": "webkitTransitionEnd"
+  }
+
+  for (t in transitions){
+    if (el.style[t] !== undefined){
+      return transitions[t];
+    }
+  }
+}
+
+var transitionEvent = whichTransitionEvent();
+
+
 $("#nav-left").click(prevCard);
 $("#nav-right").click(nextCard);
 $("#scene").click(function() {
@@ -69,9 +91,17 @@ function showCard(id, allFaceDown=false) {
   $('#top-card').append(new_top);
   $('#top-card').remove();
   $('#scene').append(top_card);
+  $("#top-card").addClass('topstyle');
   if (!allFaceDown) {
     setTimeout(function() {$("#c" + id).toggleClass('is-flipped');}, 50);
   }
+  $("#c" + id).one(transitionEvent,
+    function(event) {
+      // Do something when the transition ends
+      console.log('transition ended');
+      $("#top-card").removeClass('topstyle');
+    }
+  );
 }
 
 // function allFaceDown(oldTopCardId) {
