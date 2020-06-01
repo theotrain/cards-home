@@ -205,7 +205,7 @@ body {
   -webkit-transform: translate3d(0,0,1px);
 } */
 .topstyle {
-  transform: translateZ(1px);
+  -webkit-transform: translateZ(1px);
 }
 .is-flipped {
   /* transition: transform 0.65s; */
@@ -235,25 +235,27 @@ body {
 #c1 {
   top: 50px;
   left: 100px;
-  transform: rotate(-10deg);
+  transform: rotateY(0deg) rotate(-10deg);
 }
 #c1.is-flipped {
   transform: translateZ(1px) rotateY(180deg) rotate(10deg);
+  /* transform: matrix(matrix3d(-0.984808, 0.173648, 0, 0, 0.173648, 0.984808, 0, 0, 0, 0, -1, 0, 0, 0, 1, 1)) */
 }
 
 #c2 {
   top: 20px;
   left: 160px;
-  transform: rotate(-8deg);
+  transform: rotateY(0deg) rotate(-8deg);
 }
 #c2.is-flipped {
   transform: translateZ(1px) rotateY(180deg) rotate(8deg);
+  /* transform: matrix(matrix3d(-0.990268, 0.139173, 0, 0, 0.139173, 0.990268, 0, 0, 0, 0, -1, 0, 0, 0, 1, 1)); */
 }
 
 #c3 {
   top: 15px;
   left: 256px;
-  transform: rotate(-4deg);
+  transform: rotateY(0deg) rotate(-4deg);
 }
 #c3.is-flipped {
   transform: translateZ(1px) rotateY(180deg) rotate(4deg);
