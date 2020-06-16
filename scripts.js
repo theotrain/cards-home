@@ -74,7 +74,10 @@ function prevCard() {
 //   // $('#c1').toggleClass('is-flipped');
 //   // $(".card").removeClass('is-flipped');
 // });
-
+var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+               navigator.userAgent &&
+               navigator.userAgent.indexOf('CriOS') == -1 &&
+               navigator.userAgent.indexOf('FxiOS') == -1;
 
 
 function showCard(id, allFaceDown=false) {
@@ -93,17 +96,21 @@ function showCard(id, allFaceDown=false) {
   $('#top-card').append(new_top);
   $('#top-card').remove();
   $('#scene').append(top_card);
-  $("#top-card").addClass('topstyle');
+  if (isSafari) {
+    $("#top-card").addClass('topstyle');
+  }
   if (!allFaceDown) {
     setTimeout(function() {$("#c" + id).toggleClass('is-flipped');}, 50);
   }
-  $("#c" + id).one(transitionEvent,
-    function(event) {
-      // Do something when the transition ends
-      console.log('transition ended');
-      $("#top-card").removeClass('topstyle');
-    }
-  );
+  if (isSafari) {
+    $("#c" + id).one(transitionEvent,
+      function(event) {
+        // Do something when the transition ends
+        // console.log('transition ended');
+        $("#top-card").removeClass('topstyle');
+      }
+    );
+  }
 }
 
 // function allFaceDown(oldTopCardId) {

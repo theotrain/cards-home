@@ -510,40 +510,43 @@ body {
   #card-section-nav {
     min-width: 100%;
   }
+  #card-section-controls {
+    display: none;
+  }
   .card {
     /* large: 244 x 350, med: 223 x 320, sm: 209 x 300 */
-    /* width: 293px;
-    height: 420px; */
-    width: 223px;
-    height: 320px;
+    width: 293px;
+    height: 420px;
+    /* width: 223px;
+    height: 320px; */
   }
   #c1 {
     /* left: 220px; */
-    left: 94px;
+    left: 27px;
   }
   #c2 {
     /* left: 316px; */
-    left: 109px;
+    left: 42px;
   }
   #c3 {
     /* left: 405px; */
-    left: 120px;
+    left: 53px;
   }
   #c4 {
     /* left: 500px; */
-    left: 135px;
+    left: 68px;
   }
   #c1.stack {
-    left: 94px;
+    left: 27px;
   }
   #c2.stack {
-    left: 109px;
+    left: 42px;
   }
   #c3.stack {
-    left: 120px;
+    left: 53px;
   }
   #c4.stack {
-    left: 135px;
+    left: 68px;
   }
 }
 @media only screen and (max-width: 500px) {
