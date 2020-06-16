@@ -2,7 +2,7 @@
 //   var id = parseInt($(this).attr('id')[1]);
 //   showCard(id);
 // });
-let cardTotal = 8
+let cardTotal = 4
 let cardNum = 0
 let firstClick = true
 
@@ -38,7 +38,9 @@ $("#scene").click(function() {
     setTimeout(function() {
       $('#card-section-nav').removeClass('wide');
       $('#card-section-controls').css("visibility", "visible");
-      $('#card-section-quotes').show();
+      // $('#card-section-quotes').show();
+      $('#card-section-quotes').removeClass('show-preclick');
+      $('#card-section-quotes').addClass('show-postclick');
       nextCard();
     }, 1000);
   } else {
@@ -66,12 +68,12 @@ function prevCard() {
   showCard(cardNum);
 }
 
-$(document).ready(function() {
-  $('.card-quotes').hide();
-  // $('#quote1').fadeIn();
-  // $('#c1').toggleClass('is-flipped');
-  // $(".card").removeClass('is-flipped');
-});
+// $(document).ready(function() {
+//   $('.card-quotes').hide();
+//   // $('#quote1').fadeIn();
+//   // $('#c1').toggleClass('is-flipped');
+//   // $(".card").removeClass('is-flipped');
+// });
 
 
 
