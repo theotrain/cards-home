@@ -31,10 +31,10 @@ var inter = setInterval(function(){
   if (vw <= 960) {
     console.log("small");
     var mobile = true;
-    $('.card, .is-flipped').css('transition-duration', '0s, 0s, 0s');
+    $('.card, .is-flipped').css('transition-property', 'none');
   } else {
     var mobile = false;
-    $('.card, .is-flipped').css('transition-duration', '1s, 1s, 0.65s');
+    $('.card, .is-flipped').css('transition-property', 'left, top, transform');
   }
 }, 300);
 
@@ -55,7 +55,7 @@ $("#scene").click(function() {
       // $('#card-section-quotes').show();
       $('#card-section-quotes').removeClass('show-preclick');
       $('#card-section-quotes').addClass('show-postclick');
-      $('.card, .is-flipped').css('transition-duration', '1s, 1s, 0.65s');
+      $('.card, .is-flipped').css('transition-property', 'left, top, transform');
       nextCard();
     }, 1000);
   } else {
