@@ -141,15 +141,15 @@ $(".card-quotes a").on("click", function(event){
   event.preventDefault();
 });
 
-
+// handle swipe left / right
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
 
 var xDown = null;                                                        
 
 function getTouches(evt) {
-  return evt.touches ||             // browser API
-         evt.originalEvent.touches; // jQuery
+  return evt.touches ||             
+         evt.originalEvent.touches;
 }                                                     
 
 function handleTouchStart(evt) {
@@ -169,14 +169,16 @@ function handleTouchMove(evt) {
     var xDiff = xDown - xUp;
     var yDiff = yDown - yUp;
 
-    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+    if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
         if ( xDiff > 0 ) {
-            nextCard();
+          // right swipe
+          prevCard();
         } else {
-            prevCard();
+          // left swipe
+          nextCard();
         }                       
     } 
-    /* reset values */
+
     xDown = null;
     yDown = null;                                             
 };

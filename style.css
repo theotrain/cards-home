@@ -52,7 +52,7 @@ body {
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 300px;
+  min-height: 240px;
 }
 #pitch {
   background-color: #252525;
@@ -158,6 +158,7 @@ body {
   /* -webkit-transform: translate3d(0,0,0); */
   transition-property: left, top, transform;
   transition-duration: 1s, 1s, 0.65s;
+  /* transform-origin: center; */
   /* transition: left 1s ease-out; */
   /* transition: top 1s ease-out; */
   transform-style: preserve-3d;
@@ -265,7 +266,7 @@ body {
   transform: rotateY(0deg) rotate(4deg);
 }
 #c4.is-flipped {
-  transform: translateZ(1px) rotateY(180deg) rotate(-4deg);
+  transform: translateZ(1px) rotateY(180deg) rotate(0deg);
 }
 
 /* #c1 {
@@ -492,6 +493,10 @@ body {
   .inner-width {
     width: 380px;
   }
+  .scene:hover .card__face {
+    /* box-shadow: 2px 2px 6px 5px rgba(255, 206, 7, 0.25); */
+    box-shadow: none;
+  }
   .card-outer {
     height: 550px;
   }
@@ -504,9 +509,10 @@ body {
   } */
   .show-postclick {
     position: absolute;
+    /* line-height: 0.1em; */
     /* width: 0px;
     height: 0px; */
-    /* opacity:0px; */
+    /* opacity: 0; */
     /* display: none; */
     /* visibility: hidden; */
     z-index: -10;
@@ -610,6 +616,57 @@ body {
   #main-image {
     height: 480px;
   }
-
+}
+@supports (-ms-ime-align:auto) {
+  .card {
+    transition-property: left, top, transform;
+    transition-duration: 1s, 1s, 0s;
+    transform-style:none;
+  }
+  #c4.is-flipped {
+    transform: translateZ(1px) rotateY(180deg) rotate(-4deg);
+  }
+  #c1 {
+    transform: rotateY(180deg) rotate(8deg);
+  }
+  #c2 {
+    transform: rotateY(180deg) rotate(4deg);
+  }
+  #c3 {
+    transform: rotateY(180deg) rotate(1deg);
+  }
+  #c4 {
+    transform: rotateY(180deg) rotate(-4deg);
+  }
+  #c1, #c2, #c3, #c4 {
+    z-index: 1;
+  }
+  #c1 .card__face--back {
+    background-image: url("card-back.jpg");
+  }
+  #c1.is-flipped .card__face--back {
+    background-image: url("card1.jpg");
+  }
+  #c2 .card__face--back {
+    background-image: url("card-back.jpg");
+  }
+  #c2.is-flipped .card__face--back {
+    background-image: url("card2.jpg");
+  }
+  #c3 .card__face--back {
+    background-image: url("card-back.jpg");
+  }
+  #c3.is-flipped .card__face--back {
+    background-image: url("card3.jpg");
+  }
+  #c4 .card__face--back {
+    background-image: url("card-back.jpg");
+  }
+  #c4.is-flipped .card__face--back {
+    background-image: url("card4.jpg");
+  }
+  .card__face--back {
+    background-size: cover;
+  }
 
 }
