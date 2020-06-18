@@ -490,6 +490,9 @@ body {
 }
 
 @media only screen and (max-width: 690px) {
+  #main-image {
+    height: 400px;
+  }
   .inner-width {
     width: 380px;
   }
@@ -564,6 +567,9 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
+  #main-image {
+    height: 300px;
+  }
   .inner-width {
     width: 330px;
   }
@@ -605,18 +611,15 @@ body {
 
 
 @media only screen and (min-width: 700px) {
-  #main-image {
-    height: 400px;
-  }
   #nav {
     height: 66px;
   }
 }
-@media only screen and (min-width: 900px) {
+/* @media only screen and (min-width: 900px) {
   #main-image {
     height: 480px;
   }
-}
+} */
 @supports (-ms-ime-align:auto) {
   .card {
     transition-property: left, top, transform;
