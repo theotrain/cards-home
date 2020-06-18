@@ -491,7 +491,7 @@ body {
 
 @media only screen and (max-width: 690px) {
   #main-image {
-    height: 400px;
+    min-height: 280px;
   }
   .inner-width {
     width: 380px;
@@ -565,10 +565,15 @@ body {
     left: 68px;
   }
 }
+@media only screen and (max-width: 550px) {
+  #main-image {
+    min-height: 240px;
+  }
+}
 
 @media only screen and (max-width: 400px) {
   #main-image {
-    height: 300px;
+    min-height: 200px;
   }
   .inner-width {
     width: 330px;
