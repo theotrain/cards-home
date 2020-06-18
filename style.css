@@ -46,7 +46,26 @@ body {
 #nav-right {
   background-image: url("arrow-right.png");
 }
-
+#mobile-question-link {
+  position: absolute;
+  bottom: 25px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+}
+#mobile-question-link a {
+  /* margin-top: 30px; */
+  text-decoration: none;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+}
+#mobile-question-link a:hover {
+  text-decoration: underline;
+}
+.question-hide {
+  display: none;
+}
 #main-image {
   background-image: url("card-closeup.jpg");
   background-size: 100% auto;
@@ -93,9 +112,10 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   height: 520px;
-  /* background-color: #ffffdd; */
+  background-color: #ffffff;
 }
 #card-section {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -490,6 +510,9 @@ body {
 }
 
 @media only screen and (max-width: 690px) {
+  #mobile-question-link.question-hide {
+    display: none;
+  }
   #main-image {
     min-height: 280px;
   }
@@ -501,7 +524,7 @@ body {
     box-shadow: none;
   }
   .card-outer {
-    height: 550px;
+    height: 580px;
   }
   .card, .is-flipped {
     /* transition-duration: 0s, 0s, 0s; */
@@ -511,7 +534,8 @@ body {
     display: none;
   } */
   .show-postclick {
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
     /* line-height: 0.1em; */
     /* width: 0px;
     height: 0px; */
@@ -520,7 +544,7 @@ body {
     /* visibility: hidden; */
     z-index: -10;
     top: 0px;
-    left: -1000px;
+    left: -200px;
     /* left: 2000px; */
   }
   #card-section-nav {
@@ -620,11 +644,11 @@ body {
     height: 66px;
   }
 }
-/* @media only screen and (min-width: 900px) {
-  #main-image {
-    height: 480px;
+@media only screen and (min-width: 691px) {
+  #mobile-question-link {
+    display: none;
   }
-} */
+}
 @supports (-ms-ime-align:auto) {
   .card {
     transition-property: left, top, transform;

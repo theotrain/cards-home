@@ -6,8 +6,12 @@ let cardTotal = 4
 let cardNum = 0
 let firstClick = true
 let phoneWidth = 690;
+var link1 = 'link1.html'
+var link2 = 'link2.html'
+var link3 = 'link3.html'
+var link4 = 'link4.html'
 
-// Function from David Walsh: http://davidwalsh.name/css-animation-callback
+// whichTransitionEvent() function from David Walsh: http://davidwalsh.name/css-animation-callback
 function whichTransitionEvent(){
   var t,
       el = document.createElement("fakeelement");
@@ -106,7 +110,15 @@ function showCard(id, allFaceDown=false) {
   $('#top-card').remove();
   $('#scene').append(top_card);
   if (!allFaceDown) {
+    $('#mobile-question-link').removeClass('question-hide');
+    $('#mobile-question-link > a').attr("href", window["link" + id]);
+    // let link = Window["link" + id];
+    // $('#mobile-question-link > a').attr("href", link);
+    // console.log(window);
+    // $('#mobile-question-link > a').attr('href', 'your mom');
     setTimeout(function() {$("#c" + id).toggleClass('is-flipped');}, 50);
+  } else {
+    $('#mobile-question-link').addClass('question-hide');
   }
   if (isSafari) {
     $("#top-card").addClass('topstyle');
